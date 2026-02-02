@@ -3,5 +3,7 @@
 @theme {
   --color-bg: #020916;
   --color-accent: #ceff7e;
+  --color-lightGray: #1f2937;
   --font-dmsans: "DM Sans", sans-serif;
+  --max-width-wtf: 82rem;
 }
