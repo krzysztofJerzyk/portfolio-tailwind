@@ -7,5 +7,6 @@
   --font-dmsans: "DM Sans", sans-serif;
   --max-width-wtf: 82rem;
   --radius-10x: 0.625rem;
+  --radius-10xl: 1.25rem;
   --shadow-innerLight: inset 0 2px 0 0 rgba(255, 255, 255, 0.15);
 }
