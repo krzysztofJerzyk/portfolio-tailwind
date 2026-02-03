@@ -12,3 +12,11 @@
   --shadow-innerLight: inset 0 2px 0 0 rgba(255, 255, 255, 0.15);
   --animate-slowSpin: spin 15s infinite linear;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  scroll-margin-top: 7rem;
+}
