@@ -16,7 +16,7 @@
     <main class="px-4">
       <header class="max-w-wtf mx-auto py-6 flex justify-between gap-4">
         <div class="flex gap-4 items-center">
-          <img class="w-10 h-10" src="./img/star.svg" alt="" />
+          <img class="w-10 h-10 animate-slowSpin" src="./img/star.svg" alt="" />
           <div>
             <p class="text-xl text-accent font-bold">Krzysztof Jerzyk</p>
             <p class="text-white opacity-40 uppercase text-xs tracking-wider">
@@ -30,21 +30,34 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a class="flex gap-2 justify-center" download="" href="#"><img src="./img/download.svg">Resume</a></li>
-            <li><a class="inline-block bg-accent text-bg py-3.5 px-8 rounded-xl" href="#contact">Contact</a></li>
+            <li><a class="inline-block bg-accent text-bg py-3.5 px-8 rounded-xl ring-2 ring-accent hover:ring-accent-500 hover:bg-accent-500 transition-colors duration-500" href="#contact">Contact</a></li>
           </ul>
         </nav>
       </header>
       <section id="about" class="max-w-wtf mx-auto mb-20 md:mb-32 md:pt-32 items-center md:flex md:justify-between md:gap-12">
-        <img
-          class="w-full md:w-[26rem] mb-5 md:order-2"
-          src="./img/krzysztof.png"
-          alt="Krzysztof Jerzyk"
-        />
+        <picture class="md:order-2">
+             <source
+               type="image/avif"
+              srcset="./img/krzysztof.png?as=avif&width=416"
+                 />
+            <source
+               type="image/webp"
+               srcset="./img/krzysztof.png?as=webp&width=416"
+                />
+           <img
+              class="w-full max-w-xs md:max-w-none md:w-[26rem] mb-5"
+              src="./img/krzysztof.png?width=400"
+              alt="Krzysztof Jerzyk"
+              loading="lazy"
+              decoding="async"
+               />
+      </picture>
+
+
         <div class="max-w-3xl">
         <h1 class="text-2xl font-bold mb-4 md:text-3xl lg:text-5xl md:leading-snug">
-          My name is Krzysiek and I'm an aspiring
-          <span class="text-accent">Frontend developer</span> and a&nbsp;keen Star
-          Wars fan.
+          My name is Krzysiek Jerzyk and I'm an aspiring
+          <span class="text-accent">Frontend developer</span>&nbsp;and an avid cycling fan.
         </h1>
         <p class="text-gray-400 mb-8 md:mb-16 font-medium md:text-2xl">
           You might be interested in checking the list of my
@@ -55,12 +68,12 @@
         </p>
         <div class="flex flex-col flex-wrap md:flex-row items-start gap-4">
           <a
-            class="bg-accent text-bg flex gap-3 font-bold text-xl py-2 px-4 md:py-3.5 md:px-6 items-center rounded-10x md:rounded-10xl ring-accent ring-2"
+            class="bg-accent  text-bg flex gap-3 font-bold text-xl py-2 px-4 md:py-3.5 md:px-6 items-center rounded-10x md:rounded-10xl ring-2 ring-accent hover:ring-accent-500 hover:bg-accent-500 transition-colors duration-500"
             href="#contact"
             ><img src="./img/chat.svg" alt="" />Get in touch</a
           >
           <a
-            class="bg-bg text-accent flex gap-3 font-bold text-xl py-2 px-4 md:py-3.5 md:px-6 items-center rounded-10x md:rounded-10xl ring-lightGray ring-2"
+            class="bg-bg text-accent flex gap-3 font-bold text-xl py-2 px-4 md:py-3.5 md:px-6 items-center rounded-10x md:rounded-10xl ring-lightGray ring-2 hover:ring-accent-500  transition-colors duration-500"
             href="#skills"
             ><img src="./img/user.svg" alt="" />Get to know me</a
           >
@@ -148,8 +161,7 @@
           Recent Projects
         </h2>
         <p class="text-2xl md:text-4xl md:max-w-3xl font-medium tracking-tight mb-10 md:mb-20">
-          Since diving into frontend development in 2023, I've brought a range
-          of projects to life. Here's a snapshot of my accomplishments so far.
+          I decided to refresh my knowledge from my IT studies, focused on the frontend topic, I've completed some projects and picked some cool skills. Check out what I can do below.
         </p>
         <div class="grid gap-4 md:grid-cols-2 projects--js">
 
@@ -164,47 +176,70 @@
         <p class="text-2xl md:text-4xl md:max-w-3xl font-medium tracking-tight mb-10 md:mb-20">
           Outside of my regular working hours, I delve into an array of
           activities and passions. Here's a glimpse into how I spend my
-          after-hours.
+          after-hours and a brief description of my current work.
         </p>
         <div class="grid gap-16 md:gap-8 lg:gap-4 md:grid-cols-2 lg:grid-cols-4">
           <article>
-            <img src="./img/bike.png" alt="" class="mb-6 w-full" />
+            <picture>
+             <source media="(max-width:1023px)" type="image/avif" srcset="./img/bike.png?as=avif&width=316&height=316"/>
+             <source media="(max-width:1023px)" type="image/webp" srcset="./img/bike.png?as=webp&width=316&height=316"/>
+             <source media="(min-width:1024px)" type="image/avif" srcset="./img/bike.png?as=avif&width=316"/>
+             <source media="(min-width:1024px)" type="image/webp" srcset="./img/bike.png?as=webp&width=316"/>
+             <img src="./img/bike.png" alt="" class="mb-6 w-full rounded-10xl" />
+            </picture>
+
             <h3 class="text-2xl font-bold tracking-tight mb-1">
-              Electronic Music
+              Bike
             </h3>
             <p class="text-gray-400">
-              Outside of my regular working hours, I immerse myself in the
-              pulsating rhythms and innovative sounds of electronic music
+              Outside of my regular working hours, I like to spend time actively, one of my favorite activities is cycling
             </p>
           </article>
           <article>
-            <img src="./img/job.png" alt="" class="mb-6 w-full" />
+            <picture>
+             <source media="(max-width:1023px)" type="image/avif" srcset="./img/job.png?as=avif&width=316&height=316"/>
+             <source media="(max-width:1023px)" type="image/webp" srcset="./img/job.png?as=webp&width=316&height=316"/>
+             <source media="(min-width:1024px)" type="image/avif" srcset="./img/job.png?as=avif&width=316"/>
+             <source media="(min-width:1024px)" type="image/webp" srcset="./img/job.png?as=webp&width=316"/>
+             <img src="./img/job.png" alt="" class="mb-6 w-full rounded-10xl" />
+            </picture>
+
             <h3 class="text-2xl font-bold tracking-tight mb-1">
-              Electronic Music
+              Quality control
             </h3>
             <p class="text-gray-400">
-              Outside of my regular working hours, I immerse myself in the
-              pulsating rhythms and innovative sounds of electronic music
+              This is my current job, where I have gained skills in the production of railroad components and learned how to operate many measuring instruments.
             </p>
           </article>
           <article>
-            <img src="./img/food.png" alt="" class="mb-6 w-full" />
+            <picture>
+             <source media="(max-width:1023px)" type="image/avif" srcset="./img/food.png?as=avif&width=316&height=316"/>
+             <source media="(max-width:1023px)" type="image/webp" srcset="./img/food.png?as=webp&width=316&height=316"/>
+             <source media="(min-width:1024px)" type="image/avif" srcset="./img/food.png?as=avif&width=316"/>
+             <source media="(min-width:1024px)" type="image/webp" srcset="./img/food.png?as=webp&width=316"/>
+             <img src="./img/food.png" alt="" class="mb-6 w-full rounded-10xl" />
+            </picture>
+
             <h3 class="text-2xl font-bold tracking-tight mb-1">
-              Electronic Music
+              Food
             </h3>
             <p class="text-gray-400">
-              Outside of my regular working hours, I immerse myself in the
-              pulsating rhythms and innovative sounds of electronic music
+              In my free time, I enjoy discovering new flavors, restaurants and cuisines, and experimenting with food whenever I get the chance.
             </p>
           </article>
           <article>
-            <img src="./img/travel.png" alt="" class="mb-6 w-full" />
+             <picture>
+             <source media="(max-width:1023px)" type="image/avif" srcset="./img/travel.png?as=avif&width=316&height=316"/>
+             <source media="(max-width:1023px)" type="image/webp" srcset="./img/travel.png?as=webp&width=316&height=316"/>
+             <source media="(min-width:1024px)" type="image/avif" srcset="./img/travel.png?as=avif&width=316"/>
+             <source media="(min-width:1024px)" type="image/webp" srcset="./img/travel.png?as=webp&width=316"/>
+             <img src="./img/travel.png" alt="" class="mb-6 w-full rounded-10xl" />
+            </picture>
             <h3 class="text-2xl font-bold tracking-tight mb-1">
-              Electronic Music
+              Travel
             </h3>
             <p class="text-gray-400">
-              Outside of my regular working hours, I immerse myself in the
-              pulsating rhythms and innovative sounds of electronic music
+              Whenever I have the opportunity, I like to explore new places, hike in the mountains and enjoy moments of calm surrounded by nature.
             </p>
           </article>
         </div>
@@ -220,7 +255,7 @@
           I'm open for new opportunities. <br />If you have one for me we should
           talk!
         </p>
-        <a class="bg-accent text-bg flex gap-3 font-bold text-xl leading-9 py-3 px-3 md:px-7 items-center rounded-2xl flex-wrap justify-center mb-10 md:mb-20 href="mailto:qriss21@gmail.com"
+        <a class="bg-accent hover:bg-accent-500 transition-colors duration-500 text-bg flex gap-3 font-bold text-xl leading-9 py-3 px-3 md:px-7 items-center rounded-2xl flex-wrap justify-center mb-10 md:mb-20 href="mailto:qriss21@gmail.com"
           ><img src="./img/mail-icon.svg" alt="" />jerzyk.krzysztof.1993@gmail.com</a
         >
         <p class="text-2xl text-gray-400 font-medium mb-6">or find me on</p>
