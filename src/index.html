@@ -20,8 +20,9 @@
     <title>Portfolio</title>
   </head>
   <body class="font-dmsans bg-bg text-white">
-    <main class="px-4">
-      <header class="max-w-wtf mx-auto py-6 flex justify-between gap-4">
+    <main>
+      <header class="py-6 sticky top-0 bg-bg/40 backdrop-blur-lg">
+        <div class="max-w-wtf mx-auto flex justify-between gap-4 px-4  ">
         <div class="flex gap-4 items-center">
           <img class="w-10 h-10 animate-slowSpin" src="./img/star.svg" alt="" />
           <div>
@@ -40,7 +41,9 @@
             <li><a class="inline-block bg-accent text-bg py-3.5 px-8 rounded-xl ring-2 ring-accent hover:ring-accent-500 hover:bg-accent-500 transition-colors duration-500" href="#contact">Contact</a></li>
           </ul>
         </nav>
+        </div>
       </header>
+      <div class="px-4">
       <section id="about" class="max-w-wtf mx-auto mb-20 md:mb-32 md:pt-32 items-center md:flex md:justify-between md:gap-12">
         <picture class="md:order-2">
              <source
@@ -291,6 +294,7 @@
           </li>
         </ul>
       </section>
+      </div>
     </main>
     <script type="module" src="./main.js"></script>
   </body>
