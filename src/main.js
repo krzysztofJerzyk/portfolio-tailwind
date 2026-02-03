@@ -1,6 +1,8 @@
-import githubIcon from "../img/github-icon.svg";
-import demoIcon from "../img/demo-icon.svg";
-import starIcon from "../img/small-star.svg";
+const githubIcon = new URL("./img/github-icon.svg", import.meta.url).href;
+const demoIcon = new URL("./img/demo-icon.svg", import.meta.url).href;
+const starIcon = new URL("./img/small-star.svg", import.meta.url).href;
+
+console.log({ githubIcon, demoIcon, starIcon });
 
 const projectsConteiner = document.querySelector(".projects--js");
 const userName = "krzysztofJerzyk";
