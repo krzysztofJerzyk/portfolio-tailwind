@@ -59,7 +59,7 @@ fetch(`https://api.github.com/users/${userName}/repos?direction=${direction}`)
                   href="${homepage}"
                   target="_blank"
                   rel="noreferrer notfollow"
-                  ><img src="${demoIcon}" alt="" class="w-6 h-6" />View
+                  ><img src="${demoIcon}" alt="" class="w-6 h-6" width="24" height="24" />View
                   demo</a
                 >
                 <a
@@ -70,6 +70,7 @@ fetch(`https://api.github.com/users/${userName}/repos?direction=${direction}`)
                   ><img
                     src="${githubIcon}"
                     alt=""
+                    width="24" height="24"
                     class="w-6 h-6"
                   />Source code</a
                 >
